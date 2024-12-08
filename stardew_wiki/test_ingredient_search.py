@@ -60,6 +60,18 @@ class TestIngredientSearch(unittest.TestCase):
                 self.assertNotIn("Tomato", output)
                 self.assertNotIn("Milk", output)
         
+        with patch('builtins.input', side_effect=['Pizza', 'Tomato', 'Wheat Flour', "Cheese", 'STOP']):
+            with patch('builtins.print') as mocked_print:
+                suggest_missing_ingredients(self.recipes_df)
+                output = "\n".join([args[0] for args, _ in mocked_print.call_args_list])
+                self.assertIn("You have all the ingredients!", output)
+
+        with patch('builtins.input', side_effect=['Garlic', 'STOP']):
+            with patch('builtins.print') as mocked_print:
+                suggest_missing_ingredients(self.recipes_df)
+                output = "\n".join([args[0] for args, _ in mocked_print.call_args_list])
+                self.assertIn("Recipe not found.", output)
+        
 
     @classmethod
     def tearDownClass(cls):
