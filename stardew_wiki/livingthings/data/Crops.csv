@@ -1,0 +1,39 @@
+name_crop,season,growth_crop,regrowth_crop,crop_price,craft_crop,craft_crop_price
+Cauliflower,Spring,12,,175,,
+Garlic,Spring,4,,60,,
+Kale,Spring,6,,110,,
+Parsnip,Spring,4,,35,,
+Potato,Spring,6,,80,,
+Rhubarb,Spring,13,,220,,
+Unmilled Rice,Spring,8,,30,Rice,100
+Carrot,Spring,3,,35,,
+Coffee Bean,Spring/Summer,10,2,15(*4),Coffee,150
+Green Bean,Spring,10,3,40,,
+Strawbary,Spring,8,4,120,,
+Melon,Summer,12,,250,,
+Radish,Summer,6,,90,,
+Red Cabbage,Summer,9,,260,,
+Starfruit,Summer,13,,750,,
+Sunflower,Summer/Fall,8,,80,Oil,100
+Wheat,Summer/Fall,4,,25,Wheat Flour,50
+Blueberry,Summer,13,4,50(*3),,
+Corn,Summer/Fall,14,4,50,Oil,100
+Hops,Summer,11,1,25,Pale Ale,300
+Hot Pepper,Summer,5,8,40,,
+Tomato,Summer,11,5,60,,
+Summer Squash,Summer,6,8,45,,
+Amaranth,Fall,7,,150,,
+Artichoke,Fall,8,,160,,
+Beet,Fall,6,,100,Sugar,50
+Bok Choy,Fall,4,,80,,
+Pumpkin,Fall,13,,320,,
+Sweet Gem Berry,Fall,24,,3000,,
+Yam,Fall,10,,160,,
+Cranberries,Fall,7,5,75(*2),,
+Eggplant,Fall,5,5,60,,
+Broccoli,Fall,8,4,70,,
+Grape,Fall,10,3,80,Raisin,600
+Ancient Fruit,Spring/Summer/Fall,28,,550,,
+Cactus ,Tropical,12,3,75,,
+Pineapple,Summer/Tropical,14,7,300,,
+Taro,Summer/Tropical,10,,100,,
