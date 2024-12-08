@@ -36,6 +36,12 @@ class TestRecipeSearch(unittest.TestCase):
             'artisan_animal_price': [150, 50],
         })
 
+    def setUp(self):
+        print('Set up')
+
+    def tearDown(self):
+        print('Tear down')
+        
     def test_list_all_recipes(self):
         with patch('builtins.print') as mocked_print:
             list_all_recipes(self.recipes_df)
