@@ -92,5 +92,10 @@ class TestRecipeSearch(unittest.TestCase):
                 self.assertIn("Ingredient not found in Crops or Animals.", output)
 
 
-if __name__ == "__main__":
-    unittest.main()
+    @classmethod
+    def tearDownClass(cls):
+        # Clean up class-level resources
+        cls.recipes_df = None
+        cls.crops_df = None
+        cls.animals_df = None
+
