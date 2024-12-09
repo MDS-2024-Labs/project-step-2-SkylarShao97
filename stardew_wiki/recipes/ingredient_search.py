@@ -5,34 +5,28 @@ def list_all_ingredients(recipes_df):
     Lists all unique ingredients from the 'ingredients' column.
     Removes parentheses and numbers, ensuring unique ingredient names.
     """
-    try:
-        # Step 1: Split the ingredients into individual items
-        ingredients = (
-            recipes_df['ingredients']
-            .str.split(',')  # Split by comma
-            .explode()  # Expand into individual rows
-            .str.strip()  # Remove extra spaces
-            .dropna()  # Drop any NaN values
-        )
-        
-        # Step 2: Remove text inside parentheses (e.g., '(1)') using regex
-        clean_ingredients = (
-            ingredients.str.replace(r"\(.*?\)", "", regex=True)  # Remove content in parentheses
-            .str.replace(r"\d+", "", regex=True)  # Remove digits
-            .str.strip()  # Strip spaces again after cleanup
-            .unique()  # Get unique ingredients
-        )
-        
-        # Step 3: Print each ingredient line by line
-        print("\nUnique Ingredients:")
-        for ingredient in sorted(clean_ingredients):  # Sort alphabetically for better readability
-            print(f"- {ingredient}")
-
-    except KeyError as e:
-        print(f"Error: The column is missing in the data. {e}")
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+    # Step 1: Split the ingredients into individual items
+    ingredients = (
+        recipes_df['ingredients']
+        .str.split(',')  # Split by comma
+        .explode()  # Expand into individual rows
+        .str.strip()  # Remove extra spaces
+        .dropna()  # Drop any NaN values
+    )
     
+    # Step 2: Remove text inside parentheses (e.g., '(1)') using regex
+    clean_ingredients = (
+        ingredients.str.replace(r"\(.*?\)", "", regex=True)  # Remove content in parentheses
+        .str.replace(r"\d+", "", regex=True)  # Remove digits
+        .str.strip()  # Strip spaces again after cleanup
+        .unique()  # Get unique ingredients
+    )
+    
+    # Step 3: Print each ingredient line by line
+    print("\nUnique Ingredients:")
+    for ingredient in sorted(clean_ingredients):  # Sort alphabetically for better readability
+        print(f"- {ingredient}")
+
     return clean_ingredients
 
 
