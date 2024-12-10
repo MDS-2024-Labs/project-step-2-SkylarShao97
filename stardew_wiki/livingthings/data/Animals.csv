@@ -1,0 +1,11 @@
+name_animal,type,growth_animal,product_animal,product_animal_price,artisan_animal,artisan_animal_price
+Chicken,Coop,9000(min),Egg,50,Mayonnaise,190
+Duck,Coop,9000(min),Duck Egg,95,Duck Mayonnaise,375
+Void Chicken,Coop,9000(min),Void Egg,65,Void Mayonnaise,275
+Dinosaur,Coop,18000(min),Dinosaur Egg,350,Dinosaur Mayonnaise,800
+Rabbit,Coop,6(night),Wool,340,Cloth,470
+Cow,Barn,5(night),Milk,125,Cheese,230
+Goat,Barn,5(night),Goat Milk,225,Goat Cheese,400
+Sheep,Barn,4(night),Wool,340,Cloth,470
+Pig,Barn,10(night),Truffle,625,Truffle Oil,1065
+Ostrich,Barn,7(night),Ostrich Egg,600,Mayonnaise(10),190
